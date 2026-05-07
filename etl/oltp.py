@@ -7,25 +7,36 @@ from utils.postgres_conn import create_postgres_connection
 from utils.s3_conn import s3_conn
 from pathlib import Path
 import s3fs
+import tempfile
 
 load_dotenv()
 
 def ingestao_oltp(path: str, table_name: str, conn) -> None:
     delimitador = obter_delimitador(path=path)
 
+    cursor = conn.cursor()
     try:
-        df = pd.read_csv(path, delimiter=delimitador)
+        with open (path, 'r', encoding='latin1') as f:
 
-        df.to_sql(
-            name=table_name,
-            con=conn,
-            if_exists='replace',
-            index=False
-        )
+            cursor.copy_expert(
+                sql=f"""
+                    COPY {table_name}
+                    FROM STDIN
+                    WITH CSV
+                    HEADER
+                    DELIMITER '{delimitador}'
+                    ENCODING 'LATIN1'
+                """,
+                file=f
+            )
 
-        logger.info(f"Realizado ingestão na tabela: {table_name}")
+            conn.commit()
     except Exception as e:
-        logger.error(f"Erro ao tentar inserir dados na tabela: {table_name}, {e}")
+        conn.rollback()
+
+        logger.error(f"Erro ao inserir dados na tabela: {table_name}: {e}")
+    finally:
+        cursor.close()
 
 def percorrer_bucket(bucket_name: str) -> None:
     s3 = s3_conn()
@@ -38,7 +49,7 @@ def percorrer_bucket(bucket_name: str) -> None:
     )
 
     try:
-        #paginator = s3.get_paginator('list_objects_v2')
+        paginator = s3.get_paginator('list_objects_v2')
 
         page_iterator = paginator.paginate(Bucket=bucket_name)
 
@@ -49,18 +60,22 @@ def percorrer_bucket(bucket_name: str) -> None:
                 if not s3_key.endswith('.csv'):
                     continue
 
-                table_name = s3_key.split('/')[-2].lower()
+                table_name = s3_key.split('/')[-2].lower().replace('-', '_').replace(' ', '_')
 
                 s3_path = f"s3://{bucket_name}/{s3_key}"
+
+                s3_temp = download_s3_temp(bucket_name, s3_key, s3)
 
                 logger.info(f"Processando: {s3_path}")
                 logger.info(f"Inserindo na tabela: {table_name}")
 
                 ingestao_oltp(
-                    path=s3_path,
+                    path=s3_temp,
                     table_name=table_name,
                     conn=conn
                 )
+                
+                os.remove(s3_temp)
     except Exception as e:
         logger.error(f"Erro ao coletar dados do s3: {e}")
 
@@ -73,3 +88,26 @@ def obter_delimitador(path: str):
 
         sniffer = csv.Sniffer()
         return sniffer.sniff(sample).delimiter
+    
+    with open(path, 'r', encoding='latin1') as f:
+        sample = f.read(5000)
+
+    sniffer = csv.Sniffer()
+    return sniffer.sniff(sample).delimiter
+    
+def download_s3_temp(bucket, key, s3):
+    temp = tempfile.NamedTemporaryFile(
+        delete=False,
+        suffix='.csv'
+    )
+
+    s3.download_fileobj(
+        bucket,
+        key,
+        temp
+    )
+
+    temp.close()
+
+    return temp.name
+    
