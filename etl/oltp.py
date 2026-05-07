@@ -38,7 +38,7 @@ def percorrer_bucket(bucket_name: str) -> None:
     )
 
     try:
-        paginator = s3.get_paginator('list_objects_v2')
+        #paginator = s3.get_paginator('list_objects_v2')
 
         page_iterator = paginator.paginate(Bucket=bucket_name)
 
