@@ -12,11 +12,11 @@ import tempfile
 load_dotenv()
 
 def ingestao_oltp(path: str, table_name: str, conn) -> None:
-    delimitador = obter_delimitador(path=path)
+    #delimitador = obter_delimitador(path=path)
 
     cursor = conn.cursor()
     try:
-        with open (path, 'r', encoding='latin1') as f:
+        with open (path, 'r', encoding='utf-8') as f:
 
             cursor.copy_expert(
                 sql=f"""
@@ -24,8 +24,8 @@ def ingestao_oltp(path: str, table_name: str, conn) -> None:
                     FROM STDIN
                     WITH CSV
                     HEADER
-                    DELIMITER '{delimitador}'
-                    ENCODING 'LATIN1'
+                    DELIMITER ';'
+                    ENCODING 'UTF-8'
                 """,
                 file=f
             )
@@ -83,13 +83,13 @@ def obter_delimitador(path: str):
     if path.startswith('s3://'):
         fs = s3fs.S3FileSystem()
 
-        with fs.open(path, 'r', encoding='latin1') as f:
+        with fs.open(path, 'r', encoding='utf-8') as f:
             sample = f.read(5000)
 
         sniffer = csv.Sniffer()
         return sniffer.sniff(sample).delimiter
     
-    with open(path, 'r', encoding='latin1') as f:
+    with open(path, 'r', encoding='utf-8') as f:
         sample = f.read(5000)
 
     sniffer = csv.Sniffer()
