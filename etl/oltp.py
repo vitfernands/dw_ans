@@ -8,14 +8,17 @@ from utils.s3_conn import s3_conn
 from pathlib import Path
 import s3fs
 import tempfile
+import io
 
 load_dotenv()
 
 def ingestao_oltp(path: str, table_name: str, conn) -> None:
-    #delimitador = obter_delimitador(path=path)
+    delimitador = obter_delimitador(path=path)
 
     cursor = conn.cursor()
     try:
+        #f = preprocessar_csv(path)
+
         with open (path, 'r', encoding='utf-8') as f:
 
             cursor.copy_expert(
@@ -24,7 +27,7 @@ def ingestao_oltp(path: str, table_name: str, conn) -> None:
                     FROM STDIN
                     WITH CSV
                     HEADER
-                    DELIMITER ';'
+                    DELIMITER '{delimitador}'
                     ENCODING 'UTF-8'
                 """,
                 file=f
@@ -110,4 +113,27 @@ def download_s3_temp(bucket, key, s3):
     temp.close()
 
     return temp.name
+
+def fix_numeric_decimal(value: str) -> str:
+    cleaned = value.strip().replace('.', '').replace(',', '.')
+    try:
+        float(cleaned)
+        return cleaned
+    except ValueError:
+        return value
     
+def preprocessar_csv(path: str) -> io.StringIo:
+    buffer = io.StringIO
+
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.reader(f, delimiter=';')
+        writer = csv.writer(buffer, delimiter=';')
+
+        for i, row in enumerate(reader):
+            if i == 0:
+                writer.writerow(row)
+                continue
+            writer.writerow([fix_numeric_decimal(cell) for cell in row])
+
+    buffer.seek(0)
+    return buffer

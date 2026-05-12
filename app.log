@@ -1,67 +1,28 @@
-2026-05-07 11:58:27,734 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/areas_comercializacao_planos/pda_area_comer_plano_ntrp (1).csv
-2026-05-07 11:58:27,735 - utils.logger - INFO - Inserindo na tabela: areas_comercializacao_planos
-2026-05-07 11:59:08,700 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/caracteristicas_produtos_suplementares/pda-008-caracteristicas_produtos_saude_suplementar.csv
-2026-05-07 11:59:08,700 - utils.logger - INFO - Inserindo na tabela: caracteristicas_produtos_suplementares
-2026-05-07 11:59:10,900 - utils.logger - ERROR - Erro ao inserir dados na tabela: caracteristicas_produtos_suplementares: extra data after last expected column
-CONTEXT:  COPY caracteristicas_produtos_suplementares, line 2: "18332657;"487650204";"CENIBRA LOGISTICA LTDA";"422436";"Cenibra Log�stica Ltda";"Autogest�o";"Pequ..."
-
-2026-05-07 11:59:15,181 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/indice_reclamacoes/IGR.csv
-2026-05-07 11:59:15,181 - utils.logger - INFO - Inserindo na tabela: indice_reclamacoes
-2026-05-07 11:59:16,031 - utils.logger - ERROR - Erro ao inserir dados na tabela: indice_reclamacoes: extra data after last expected column
-CONTEXT:  COPY indice_reclamacoes, line 2: ""000515";"ALLIANZ SA�DE S/A";"Assist�ncia m�dica";921,66;2;217;"Pequeno";202601;202512;"2026-02-0..."
-
-2026-05-07 11:59:17,278 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2020.csv
-2026-05-07 11:59:17,278 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-07 11:59:18,604 - utils.logger - ERROR - Erro ao inserir dados na tabela: mensalidade_por_faixa_etaria: extra data after last expected column
-CONTEXT:  COPY mensalidade_por_faixa_etaria, line 2: "337498;1476312;231921;02/01/2020;UNICA;00 a 18 anos;553.40;253.72;387.38;719.42;03/03/2026"
-
-2026-05-07 11:59:22,880 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2021.csv
-2026-05-07 11:59:22,880 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-07 11:59:23,692 - utils.logger - ERROR - Erro ao inserir dados na tabela: mensalidade_por_faixa_etaria: extra data after last expected column
-CONTEXT:  COPY mensalidade_por_faixa_etaria, line 2: "327689;1482890;251139;04/01/2021;UNICA;00 a 18 anos;321.14;191.18;224.80;417.48;03/03/2026"
-
-2026-05-07 11:59:25,213 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2022.csv
-2026-05-07 11:59:25,213 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-07 11:59:26,079 - utils.logger - ERROR - Erro ao inserir dados na tabela: mensalidade_por_faixa_etaria: extra data after last expected column
-CONTEXT:  COPY mensalidade_por_faixa_etaria, line 2: "360449;1453213;271642;03/01/2022;UNICA;34 a 38 anos;507.79;345.05;355.45;660.13;03/03/2026"
-
-2026-05-07 11:59:30,547 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2023.csv
-2026-05-07 11:59:30,548 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-07 11:59:31,738 - utils.logger - ERROR - Erro ao inserir dados na tabela: mensalidade_por_faixa_etaria: extra data after last expected column
-CONTEXT:  COPY mensalidade_por_faixa_etaria, line 2: "403911;18597299;292775;02/01/2023;REGIONALIZADA;59 anos ou mais;2077.76;1216.02;1454.43;2701.09;03/0..."
-
-2026-05-07 11:59:34,505 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2024.csv
-2026-05-07 11:59:34,505 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-07 11:59:35,656 - utils.logger - ERROR - Erro ao inserir dados na tabela: mensalidade_por_faixa_etaria: extra data after last expected column
-CONTEXT:  COPY mensalidade_por_faixa_etaria, line 2: "356417;18305880;330088;02/01/2024;UNICA;00 a 18 anos;418.96;334.44;334.44;544.65;03/03/2026"
-
-2026-05-07 11:59:41,700 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2025.csv
-2026-05-07 11:59:41,700 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-07 11:59:42,975 - utils.logger - ERROR - Erro ao inserir dados na tabela: mensalidade_por_faixa_etaria: extra data after last expected column
-CONTEXT:  COPY mensalidade_por_faixa_etaria, line 2: "312720;14860818;366737;02/01/2025;UNICA;00 a 18 anos;584.45;361.32;409.12;759.79;03/03/2026"
-
-2026-05-07 11:59:43,584 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2026.csv
-2026-05-07 11:59:43,584 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-07 11:59:44,153 - utils.logger - ERROR - Erro ao inserir dados na tabela: mensalidade_por_faixa_etaria: extra data after last expected column
-CONTEXT:  COPY mensalidade_por_faixa_etaria, line 2: "348261;1420763;410146;02/01/2026;UNICA;00 a 18 anos;253.58;153.77;177.51;329.65;03/03/2026"
-
-2026-05-07 11:59:51,200 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/municipios/pda-008-tabela_auxiliar_de_detalhamento_de_municipios.csv
-2026-05-07 11:59:51,200 - utils.logger - INFO - Inserindo na tabela: municipios
-2026-05-07 11:59:53,028 - utils.logger - ERROR - Erro ao inserir dados na tabela: municipios: extra data after last expected column
-CONTEXT:  COPY municipios, line 2: ""0014BE8D8B650EC57CB737009B44D72F1A4CD69C";"SP";"351830";"Guararema";"SUDESTE""
-
-2026-05-07 11:59:53,510 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/operadoras_ativas/Relatorio_cadop.csv
-2026-05-07 11:59:53,510 - utils.logger - INFO - Inserindo na tabela: operadoras_ativas
-2026-05-07 11:59:54,076 - utils.logger - ERROR - Erro ao inserir dados na tabela: operadoras_ativas: extra data after last expected column
-CONTEXT:  COPY operadoras_ativas, line 2: ""419761";"19541931000125";"18 DE JULHO ADMINISTRADORA DE BENEF�CIOS LTDA";;"Administradora de Benef..."
-
-2026-05-07 11:59:55,543 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/taxa_resolutividade/pda-048-taxa_de_resolutividade.csv
-2026-05-07 11:59:55,544 - utils.logger - INFO - Inserindo na tabela: taxa_resolutividade
-2026-05-07 11:59:56,107 - utils.logger - ERROR - Erro ao inserir dados na tabela: taxa_resolutividade: invalid input syntax for type integer: "100,00"
-CONTEXT:  COPY taxa_resolutividade, line 2, column vl_tr: "100,00"
-
-2026-05-07 12:00:58,640 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/valor_comercial_municipio/202506.csv
-2026-05-07 12:00:58,641 - utils.logger - INFO - Inserindo na tabela: valor_comercial_municipio
-2026-05-07 12:02:03,868 - utils.logger - ERROR - Erro ao inserir dados na tabela: valor_comercial_municipio: invalid input syntax for type integer: "303,06"
-CONTEXT:  COPY valor_comercial_municipio, line 2, column vcm: "303,06"
-
+2026-05-11 22:21:01,568 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/areas_comercializacao_planos/pda_area_comer_plano_ntrp (1).csv
+2026-05-11 22:21:01,568 - utils.logger - INFO - Inserindo na tabela: areas_comercializacao_planos
+2026-05-11 22:21:50,817 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/caracteristicas_produtos_suplementares/pda-008-caracteristicas_produtos_saude_suplementar.csv
+2026-05-11 22:21:50,818 - utils.logger - INFO - Inserindo na tabela: caracteristicas_produtos_suplementares
+2026-05-11 22:21:54,556 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/indice_reclamacoes/IGR.csv
+2026-05-11 22:21:54,556 - utils.logger - INFO - Inserindo na tabela: indice_reclamacoes
+2026-05-11 22:21:56,938 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2020.csv
+2026-05-11 22:21:56,938 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-11 22:21:59,267 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2021.csv
+2026-05-11 22:21:59,267 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-11 22:22:01,520 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2022.csv
+2026-05-11 22:22:01,520 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-11 22:22:05,485 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2023.csv
+2026-05-11 22:22:05,485 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-11 22:22:10,914 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2024.csv
+2026-05-11 22:22:10,915 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-11 22:22:14,037 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2025.csv
+2026-05-11 22:22:14,037 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-11 22:22:16,571 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2026.csv
+2026-05-11 22:22:16,571 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-11 22:22:23,291 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/municipios/pda-008-tabela_auxiliar_de_detalhamento_de_municipios.csv
+2026-05-11 22:22:23,291 - utils.logger - INFO - Inserindo na tabela: municipios
+2026-05-11 22:22:25,550 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/operadoras_ativas/Relatorio_cadop.csv
+2026-05-11 22:22:25,550 - utils.logger - INFO - Inserindo na tabela: operadoras_ativas
+2026-05-11 22:22:26,673 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/taxa_resolutividade/pda-048-taxa_de_resolutividade.csv
+2026-05-11 22:22:26,673 - utils.logger - INFO - Inserindo na tabela: taxa_resolutividade
+2026-05-11 22:23:35,636 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/valor_comercial_municipio/202506.csv
+2026-05-11 22:23:35,636 - utils.logger - INFO - Inserindo na tabela: valor_comercial_municipio
