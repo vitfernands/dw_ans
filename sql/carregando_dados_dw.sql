@@ -22,6 +22,38 @@ OPTIONS (
     password 'equi81'
 );
 
+--Importando as tabelas
+
 IMPORT FOREIGN SCHEMA public
 LIMIT TO (operadoras_ativas)
 FROM SERVER stage_server INTO public;
+
+IMPORT FOREIGN SCHEMA public
+LIMIT TO (indice_reclamacoes)
+FROM SERVER stage_server INTO public;
+
+IMPORT FOREIGN SCHEMA public
+LIMIT TO (mensalidade_por_faixa_etaria)
+FROM SERVER stage_server INTO public;
+
+IMPORT FOREIGN SCHEMA public
+LIMIT TO (areas_comercializacao_planos)
+FROM SERVER stage_server INTO public;
+
+IMPORT FOREIGN SCHEMA public
+LIMIT TO (municipios)
+FROM SERVER stage_server INTO public;
+
+IMPORT FOREIGN SCHEMA public
+LIMIT TO (caracteristicas_produtos_suplementares)
+FROM SERVER stage_server INTO public;
+
+IMPORT FOREIGN SCHEMA public
+LIMIT TO (taxa_resolutividade)
+FROM SERVER stage_server INTO public;
+
+IMPORT FOREIGN SCHEMA public
+LIMIT TO (valor_comercial_municipio)
+FROM SERVER stage_server INTO public;
+
+
