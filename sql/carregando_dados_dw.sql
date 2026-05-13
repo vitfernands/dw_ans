@@ -2,7 +2,6 @@
 
 sudo dnf install postgresql16-contrib
 
-
 --Linkar o banco de dados STAGING com o DW
 
 CREATE EXTENSION postgres_fdw;
