@@ -122,7 +122,7 @@ def fix_numeric_decimal(value: str) -> str:
     except ValueError:
         return value
     
-def preprocessar_csv(path: str) -> io.StringIo:
+def preprocessar_csv(path: str) -> io.StringIO:
     buffer = io.StringIO
 
     with open(path, 'r', encoding='utf-8') as f:

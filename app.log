@@ -1,28 +1,28 @@
-2026-05-11 22:21:01,568 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/areas_comercializacao_planos/pda_area_comer_plano_ntrp (1).csv
-2026-05-11 22:21:01,568 - utils.logger - INFO - Inserindo na tabela: areas_comercializacao_planos
-2026-05-11 22:21:50,817 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/caracteristicas_produtos_suplementares/pda-008-caracteristicas_produtos_saude_suplementar.csv
-2026-05-11 22:21:50,818 - utils.logger - INFO - Inserindo na tabela: caracteristicas_produtos_suplementares
-2026-05-11 22:21:54,556 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/indice_reclamacoes/IGR.csv
-2026-05-11 22:21:54,556 - utils.logger - INFO - Inserindo na tabela: indice_reclamacoes
-2026-05-11 22:21:56,938 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2020.csv
-2026-05-11 22:21:56,938 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-11 22:21:59,267 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2021.csv
-2026-05-11 22:21:59,267 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-11 22:22:01,520 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2022.csv
-2026-05-11 22:22:01,520 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-11 22:22:05,485 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2023.csv
-2026-05-11 22:22:05,485 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-11 22:22:10,914 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2024.csv
-2026-05-11 22:22:10,915 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-11 22:22:14,037 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2025.csv
-2026-05-11 22:22:14,037 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-11 22:22:16,571 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2026.csv
-2026-05-11 22:22:16,571 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
-2026-05-11 22:22:23,291 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/municipios/pda-008-tabela_auxiliar_de_detalhamento_de_municipios.csv
-2026-05-11 22:22:23,291 - utils.logger - INFO - Inserindo na tabela: municipios
-2026-05-11 22:22:25,550 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/operadoras_ativas/Relatorio_cadop.csv
-2026-05-11 22:22:25,550 - utils.logger - INFO - Inserindo na tabela: operadoras_ativas
-2026-05-11 22:22:26,673 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/taxa_resolutividade/pda-048-taxa_de_resolutividade.csv
-2026-05-11 22:22:26,673 - utils.logger - INFO - Inserindo na tabela: taxa_resolutividade
-2026-05-11 22:23:35,636 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/valor_comercial_municipio/202506.csv
-2026-05-11 22:23:35,636 - utils.logger - INFO - Inserindo na tabela: valor_comercial_municipio
+2026-05-12 23:34:17,286 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/areas_comercializacao_planos/pda_area_comer_plano_ntrp (1).csv
+2026-05-12 23:34:17,286 - utils.logger - INFO - Inserindo na tabela: areas_comercializacao_planos
+2026-05-12 23:34:33,586 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/caracteristicas_produtos_suplementares/pda-008-caracteristicas_produtos_saude_suplementar.csv
+2026-05-12 23:34:33,586 - utils.logger - INFO - Inserindo na tabela: caracteristicas_produtos_suplementares
+2026-05-12 23:34:36,784 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/indice_reclamacoes/IGR.csv
+2026-05-12 23:34:36,784 - utils.logger - INFO - Inserindo na tabela: indice_reclamacoes
+2026-05-12 23:34:39,397 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2020.csv
+2026-05-12 23:34:39,397 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-12 23:34:41,931 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2021.csv
+2026-05-12 23:34:41,931 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-12 23:34:44,517 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2022.csv
+2026-05-12 23:34:44,517 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-12 23:34:47,054 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2023.csv
+2026-05-12 23:34:47,054 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-12 23:34:50,097 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2024.csv
+2026-05-12 23:34:50,097 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-12 23:34:52,796 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2025.csv
+2026-05-12 23:34:52,796 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-12 23:34:54,355 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/mensalidade_por_faixa_etaria/NOTA_TECNICA_VCM_FAIXA_ETARIA_2026.csv
+2026-05-12 23:34:54,355 - utils.logger - INFO - Inserindo na tabela: mensalidade_por_faixa_etaria
+2026-05-12 23:34:56,620 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/municipios/pda-008-tabela_auxiliar_de_detalhamento_de_municipios.csv
+2026-05-12 23:34:56,620 - utils.logger - INFO - Inserindo na tabela: municipios
+2026-05-12 23:34:57,652 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/operadoras_ativas/Relatorio_cadop.csv
+2026-05-12 23:34:57,652 - utils.logger - INFO - Inserindo na tabela: operadoras_ativas
+2026-05-12 23:34:59,524 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/taxa_resolutividade/pda-048-taxa_de_resolutividade.csv
+2026-05-12 23:34:59,524 - utils.logger - INFO - Inserindo na tabela: taxa_resolutividade
+2026-05-12 23:36:01,441 - utils.logger - INFO - Processando: s3://dados-ans-datawarehouse/dados_brutos/valor_comercial_municipio/202506.csv
+2026-05-12 23:36:01,441 - utils.logger - INFO - Inserindo na tabela: valor_comercial_municipio
