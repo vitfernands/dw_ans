@@ -1,0 +1,93 @@
+[0m22:30:20.953512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faec1005be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faec3b94e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faec015bc50>]}
+
+
+============================== 22:30:20.955849 | c6b7abe9-b2bc-4702-9005-b481e66c8a05 ==============================
+[0m22:30:20.955849 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m22:30:20.956275 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'cache_selected_only': 'False', 'empty': 'None', 'printer_width': '80', 'quiet': 'False', 'static_parser': 'True', 'write_json': 'True', 'no_print': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/vitorp/.dbt', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'debug': 'False', 'introspect': 'True', 'log_path': 'logs', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt init dbt_dw_ans', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True'}
+[0m22:30:20.962538 [info ] [MainThread]: Creating dbt configuration folder at /home/vitorp/.dbt
+[0m22:30:20.963483 [debug] [MainThread]: Starter project path: /home/vitorp/Documentos/dw_ans/.venv/lib64/python3.13/site-packages/dbt/include/starter_project
+[0m22:30:20.965716 [info ] [MainThread]: Setting up your profile.
+[0m22:30:53.730505 [info ] [MainThread]: Profile dbt_dw_ans written to /home/vitorp/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m22:30:53.731667 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m22:30:53.732066 [info ] [MainThread]: dbt version: 1.12.0-b1
+[0m22:30:53.732301 [info ] [MainThread]: python version: 3.13.13
+[0m22:30:53.732518 [info ] [MainThread]: python path: /home/vitorp/Documentos/dw_ans/.venv/bin/python
+[0m22:30:53.732748 [info ] [MainThread]: os info: Linux-6.19.14-108.fc42.x86_64-x86_64-with-glibc2.41
+[0m22:30:53.750200 [info ] [MainThread]: Using profiles dir at /home/vitorp/.dbt
+[0m22:30:53.750580 [info ] [MainThread]: Using profiles.yml file at /home/vitorp/.dbt/profiles.yml
+[0m22:30:53.750825 [info ] [MainThread]: Using dbt_project.yml file at /home/vitorp/Documentos/dw_ans/dbt_dw_ans/dbt_project.yml
+[0m22:30:53.751183 [info ] [MainThread]: adapter type: postgres
+[0m22:30:53.751408 [info ] [MainThread]: adapter version: 1.10.0
+[0m22:30:53.826081 [info ] [MainThread]: Configuration:
+[0m22:30:53.826486 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:30:53.826781 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:30:53.827016 [info ] [MainThread]: Required dependencies:
+[0m22:30:53.827262 [debug] [MainThread]: Executing "git --help"
+[0m22:30:53.828793 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:30:53.829100 [debug] [MainThread]: STDERR: "b''"
+[0m22:30:53.829338 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:30:53.829579 [info ] [MainThread]: Connection:
+[0m22:30:53.829829 [info ] [MainThread]:   host: localhost
+[0m22:30:53.830057 [info ] [MainThread]:   port: 5432
+[0m22:30:53.830281 [info ] [MainThread]:   user: vitorp
+[0m22:30:53.830497 [info ] [MainThread]:   database: dw_ans
+[0m22:30:53.830722 [info ] [MainThread]:   schema: public
+[0m22:30:53.830938 [info ] [MainThread]:   connect_timeout: 10
+[0m22:30:53.831154 [info ] [MainThread]:   role: None
+[0m22:30:53.831368 [info ] [MainThread]:   search_path: None
+[0m22:30:53.831590 [info ] [MainThread]:   keepalives_idle: 0
+[0m22:30:53.831801 [info ] [MainThread]:   sslmode: None
+[0m22:30:53.832048 [info ] [MainThread]:   sslcert: None
+[0m22:30:53.832286 [info ] [MainThread]:   sslkey: None
+[0m22:30:53.832506 [info ] [MainThread]:   sslrootcert: None
+[0m22:30:53.832729 [info ] [MainThread]:   application_name: dbt
+[0m22:30:53.832948 [info ] [MainThread]:   retries: 1
+[0m22:30:53.833377 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m22:30:53.889445 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m22:30:53.908799 [debug] [MainThread]: Using postgres connection "debug"
+[0m22:30:53.909128 [debug] [MainThread]: On debug: select 1 as id
+[0m22:30:53.909372 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:30:53.917811 [debug] [MainThread]: SQL status: SELECT 1 in 0.008 seconds
+[0m22:30:53.918453 [debug] [MainThread]: On debug: Close
+[0m22:30:53.918738 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m22:30:53.919000 [info ] [MainThread]: [32mAll checks passed![0m
+[0m22:30:53.919271 [info ] [MainThread]: Your new dbt project "dbt_dw_ans" was created!
+Initialized new project in /home/vitorp/Documentos/dw_ans/dbt_dw_ans/dbt_dw_ans
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:30:53.920830 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 33.014553, "process_in_blocks": "2048", "process_kernel_time": 0.114247, "process_mem_max_rss": "120464", "process_out_blocks": "280", "process_user_time": 1.042523}
+[0m22:30:53.921188 [debug] [MainThread]: Command `dbt init` succeeded at 22:30:53.921113 after 33.02 seconds
+[0m22:30:53.921435 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m22:30:53.921707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faec0214fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faec0239250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faebfca3f00>]}
+[0m22:30:53.922091 [debug] [MainThread]: Flushing usage events
+[0m22:30:54.699834 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:46:58.825281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb9e99be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadbc98ce10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb903b9d0>]}
+
+
+============================== 22:46:58.827779 | e867acf6-4499-4468-b37e-dbc852cec878 ==============================
+[0m22:46:58.827779 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m22:46:58.828147 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'printer_width': '80', 'use_colors': 'True', 'static_parser': 'True', 'quiet': 'False', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'target_path': 'None', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'empty': 'False', 'introspect': 'True', 'invocation_command': 'dbt run', 'debug': 'False', 'log_path': 'logs', 'use_experimental_parser': 'False', 'log_format': 'default', 'write_json': 'True', 'profiles_dir': '/home/vitorp/.dbt'}
+[0m22:46:58.828500 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/vitorp/Documentos/dw_ans/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m22:46:58.829133 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.04974771, "process_in_blocks": "0", "process_kernel_time": 0.071529, "process_mem_max_rss": "103196", "process_out_blocks": "48", "process_user_time": 0.93056}
+[0m22:46:58.829468 [debug] [MainThread]: Command `dbt run` failed at 22:46:58.829402 after 0.05 seconds
+[0m22:46:58.829734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb90755b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb9025250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb8e988d0>]}
+[0m22:46:58.829995 [debug] [MainThread]: Flushing usage events
+[0m22:46:59.640508 [debug] [MainThread]: An error was encountered while trying to flush usage events

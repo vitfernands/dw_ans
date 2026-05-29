@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: stage
+    database: operadoras_saude
+    schema: public
+    tables:
+      - name: areas_comercializacao_planos
+      - name: caracteristicas_produtos_suplementares
+      - name: indice_reclamacoes
+      - name: mensalidade_por_faixa_etaria
+      - name: municipios
+      - name: operadoras_ativas
+      - name: taxa_resolutividade
+      - name: valor_comercial_municipio
