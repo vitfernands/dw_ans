@@ -91,3 +91,80 @@ Runtime Error
 [0m22:46:58.829734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb90755b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb9025250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb8e988d0>]}
 [0m22:46:58.829995 [debug] [MainThread]: Flushing usage events
 [0m22:46:59.640508 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:38:57.498091 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 09:38:57.849326 | 4775938d-b977-4853-99b1-b2e2e6310359 ==============================
+[0m09:38:57.849326 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m09:38:57.849326 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\vitor.prochnow\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m09:38:57.952099 [info ] [MainThread]: dbt version: 1.12.0-b1
+[0m09:38:57.952099 [info ] [MainThread]: python version: 3.12.8
+[0m09:38:57.952099 [info ] [MainThread]: python path: C:\Users\vitor.prochnow\Documents\dw_ans\.venv\Scripts\python.exe
+[0m09:38:57.952099 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m09:38:58.193393 [info ] [MainThread]: Using profiles dir at C:\Users\vitor.prochnow\.dbt
+[0m09:38:58.193393 [info ] [MainThread]: Using profiles.yml file at C:\Users\vitor.prochnow\.dbt\profiles.yml
+[0m09:38:58.209635 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\vitor.prochnow\Documents\dw_ans\dbt_project.yml
+[0m09:38:58.213397 [info ] [MainThread]: adapter type: postgres
+[0m09:38:58.213397 [info ] [MainThread]: adapter version: 1.10.0
+[0m09:38:58.214987 [info ] [MainThread]: Configuration:
+[0m09:38:58.216091 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:38:58.216790 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m09:38:58.216790 [info ] [MainThread]: Required dependencies:
+[0m09:38:58.216790 [debug] [MainThread]: Executing "git --help"
+[0m09:38:58.319838 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:38:58.319838 [debug] [MainThread]: STDERR: "b''"
+[0m09:38:58.319838 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:38:58.319838 [info ] [MainThread]: Connection:
+[0m09:38:58.319838 [info ] [MainThread]:   host: localhost
+[0m09:38:58.319838 [info ] [MainThread]:   port: 5432
+[0m09:38:58.335908 [info ] [MainThread]:   user: vitorp
+[0m09:38:58.335908 [info ] [MainThread]:   database: dw_ans
+[0m09:38:58.335908 [info ] [MainThread]:   schema: public
+[0m09:38:58.335908 [info ] [MainThread]:   connect_timeout: 10
+[0m09:38:58.335908 [info ] [MainThread]:   role: None
+[0m09:38:58.339898 [info ] [MainThread]:   search_path: None
+[0m09:38:58.341909 [info ] [MainThread]:   keepalives_idle: 0
+[0m09:38:58.344338 [info ] [MainThread]:   sslmode: None
+[0m09:38:58.346283 [info ] [MainThread]:   sslcert: None
+[0m09:38:58.346283 [info ] [MainThread]:   sslkey: None
+[0m09:38:58.346283 [info ] [MainThread]:   sslrootcert: None
+[0m09:38:58.348244 [info ] [MainThread]:   application_name: dbt
+[0m09:38:58.350262 [info ] [MainThread]:   retries: 1
+[0m09:38:58.350262 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m09:38:58.978283 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m09:39:00.741834 [debug] [MainThread]: Using postgres connection "debug"
+[0m09:39:00.741834 [debug] [MainThread]: On debug: select 1 as id
+[0m09:39:00.741834 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:39:00.879258 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m09:39:00.879258 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m09:39:00.879258 [debug] [MainThread]: On debug: No close available on handle
+[0m09:39:00.893148 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m09:39:00.893148 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m09:39:00.895457 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\vitor.prochnow\Documents\dw_ans\dbt_project.yml> not found
+
+[0m09:39:00.896801 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  'utf-8' codec can't decode byte 0xe3 in position 94: invalid continuation byte
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m09:39:00.896801 [debug] [MainThread]: Command `dbt debug` failed at 09:39:00.896801 after 3.57 seconds
+[0m09:39:00.896801 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m09:39:00.896801 [debug] [MainThread]: Flushing usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.176"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019e837e-c3a9-7733-883f-e032edeeaaf2","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.176","name":"MainReportVersion","pid":12608,"thread":"tokio-rt-worker","ts":"2026-06-01T14:03:03.480036Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\vitor.prochnow\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019e837e-c3a9-7733-883f-e032edeeaaf2","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":12608,"thread":"tokio-rt-worker","ts":"2026-06-01T14:03:03.480100Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019e837e-c3a9-7733-883f-e032edeeaaf2","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":12608,"thread":"tokio-rt-worker","ts":"2026-06-01T14:03:03.521644Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019e837e-c3a9-7733-883f-e032edeeaaf2","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":12608,"thread":"tokio-rt-worker","ts":"2026-06-01T14:03:03.523420Z"}}
+{"data":{"completed_at":"2026-06-01T14:03:04.308253Z","elapsed":0.8294309377670288,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019e837e-c3a9-7733-883f-e032edeeaaf2","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [829ms]","name":"CommandCompleted","pid":12608,"thread":"tokio-rt-worker","ts":"2026-06-01T14:03:04.308476Z"}}
+{"data":{"log_version":3,"version":"=2.0.0-preview.176"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019e883b-8ea7-7330-b98b-d95ab383b81c","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.176","name":"MainReportVersion","pid":37384,"thread":"tokio-rt-worker","ts":"2026-06-02T12:07:45.104042Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\vitor.prochnow\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019e883b-8ea7-7330-b98b-d95ab383b81c","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":37384,"thread":"tokio-rt-worker","ts":"2026-06-02T12:07:45.104149Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019e883b-8ea7-7330-b98b-d95ab383b81c","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":37384,"thread":"tokio-rt-worker","ts":"2026-06-02T12:07:45.133876Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019e883b-8ea7-7330-b98b-d95ab383b81c","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":37384,"thread":"tokio-rt-worker","ts":"2026-06-02T12:07:45.137135Z"}}
+{"data":{"completed_at":"2026-06-02T12:07:46.191417Z","elapsed":1.0893058776855469,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019e883b-8ea7-7330-b98b-d95ab383b81c","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [1.1s]","name":"CommandCompleted","pid":37384,"thread":"tokio-rt-worker","ts":"2026-06-02T12:07:46.193603Z"}}
