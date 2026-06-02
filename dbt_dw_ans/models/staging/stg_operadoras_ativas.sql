@@ -12,7 +12,7 @@ SELECT
     TRIM(uf)::VARCHAR(2)              as uf,
     TRIM(REPLACE(cep, '-', ''))::VARCHAR(8) as cep,
     TRIM(ddd)::VARCHAR(2)             as ddd,
-    TRIM(telefone)::varchar(20)       as telefone,
+    TRIM(telefone)::VARCHAR(20)       as telefone,
     representante::VARCHAR(255)       as representante,
     cargo_repr::VARCHAR(100)          as cargo_repr,
     TRIM(regiao_comercializacao)::INT as regiao_comercializacao,
