@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: stage
-    database: operadoras_saude
+    database: dw_ans
     schema: public
     tables:
       - name: areas_comercializacao_planos
