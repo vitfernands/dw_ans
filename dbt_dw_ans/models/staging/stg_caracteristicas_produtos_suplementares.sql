@@ -1,5 +1,5 @@
 SELECT
-    TRIM(id_plano)::VARCHAR(20)           AS id_plano,
+    TRIM(id_plano)::INTEGER               AS id_plano,
     TRIM(cd_plano)::VARCHAR(20)           AS cd_plano,
     TRIM(nm_plano)::VARCHAR(255)          AS nm_plano,
     TRIM(registro_operadora)::VARCHAR(20) AS registro_operadora,

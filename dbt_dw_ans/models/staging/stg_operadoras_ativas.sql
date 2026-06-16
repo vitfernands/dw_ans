@@ -1,5 +1,5 @@
 SELECT
-    TRIM(registro_ans)::INT           as registro_ans,
+    TRIM(registro_ans)::INTEGER       as registro_ans,
     TRIM(cnpj)::VARCHAR(14)           as cnpj,
     razao_social::VARCHAR(255)        as razao_social,
     nome_fantasia::VARCHAR(255)       as nome_fantasia,
