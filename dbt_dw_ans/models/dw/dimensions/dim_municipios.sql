@@ -5,3 +5,4 @@ SELECT DISTINCT
     nm_regiao,
     sg_uf
 FROM {{ ref('stg_municipios') }}
+WHERE UPPER(sg_uf) = 'SC'

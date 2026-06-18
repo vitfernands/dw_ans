@@ -91,3 +91,51 @@ Runtime Error
 [0m22:46:58.829734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb90755b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb9025250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb8e988d0>]}
 [0m22:46:58.829995 [debug] [MainThread]: Flushing usage events
 [0m22:46:59.640508 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:02:56.653342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f693b611be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f693e194e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f693a7b7b10>]}
+
+
+============================== 12:02:56.656740 | ef7b2609-8e6d-4f0b-ae09-153c04e761dc ==============================
+[0m12:02:56.656740 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m12:02:56.657200 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'printer_width': '80', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'target_path': 'None', 'use_colors': 'True', 'static_parser': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'no_print': 'None', 'invocation_command': 'dbt run --select stg_mapeamento_faixa_etaria', 'log_format': 'default', 'introspect': 'True', 'partial_parse': 'True', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'profiles_dir': '/home/vitorp/.dbt'}
+[0m12:02:56.657588 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/vitorp/Documentos/dw_ans/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:02:56.658268 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.052199636, "process_in_blocks": "760", "process_kernel_time": 0.076575, "process_mem_max_rss": "103424", "process_out_blocks": "16", "process_user_time": 0.904303}
+[0m12:02:56.658627 [debug] [MainThread]: Command `dbt run` failed at 12:02:56.658548 after 0.05 seconds
+[0m12:02:56.658891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f693a7e96e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f693a799250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f693a6108d0>]}
+[0m12:02:56.659167 [debug] [MainThread]: Flushing usage events
+[0m12:02:57.250756 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:03:02.164039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f43330adbe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4335b88e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4332253b10>]}
+
+
+============================== 12:03:02.166744 | 1e742fa6-9652-4622-a8c4-33d01d07e2ef ==============================
+[0m12:03:02.166744 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m12:03:02.167138 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'profiles_dir': '/home/vitorp/.dbt', 'log_cache_events': 'False', 'static_parser': 'True', 'quiet': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'debug': 'False', 'no_print': 'None', 'target_path': 'None', 'log_path': 'logs', 'invocation_command': 'dbt run --select stg_mapeamento_faixa_etaria', 'cache_selected_only': 'False', 'use_colors': 'True', 'write_json': 'True', 'empty': 'False', 'fail_fast': 'False', 'log_format': 'default', 'printer_width': '80'}
+[0m12:03:02.167507 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/vitorp/Documentos/dw_ans/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:03:02.168147 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.050369795, "process_in_blocks": "0", "process_kernel_time": 0.078509, "process_mem_max_rss": "103436", "process_out_blocks": "0", "process_user_time": 0.884447}
+[0m12:03:02.168484 [debug] [MainThread]: Command `dbt run` failed at 12:03:02.168414 after 0.05 seconds
+[0m12:03:02.168770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f43322896e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4332235250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f43320ac8d0>]}
+[0m12:03:02.169043 [debug] [MainThread]: Flushing usage events
+[0m12:03:02.702333 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:08:13.271639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe546389be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe548fc0e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5453339d0>]}
+
+
+============================== 12:08:13.273896 | 2c403616-0d33-431f-b084-1319d32175bd ==============================
+[0m12:08:13.273896 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m12:08:13.274290 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'target_path': 'None', 'introspect': 'True', 'log_format': 'default', 'cache_selected_only': 'False', 'quiet': 'False', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'use_experimental_parser': 'False', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt run --select fato_preco_plano', 'version_check': 'True', 'profiles_dir': '/home/vitorp/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'no_print': 'None', 'log_cache_events': 'False', 'write_json': 'True', 'empty': 'False', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m12:08:13.274650 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/vitorp/Documentos/dw_ans/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:08:13.275293 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.050563775, "process_in_blocks": "0", "process_kernel_time": 0.092411, "process_mem_max_rss": "103308", "process_out_blocks": "8", "process_user_time": 0.84168}
+[0m12:08:13.275628 [debug] [MainThread]: Command `dbt run` failed at 12:08:13.275551 after 0.05 seconds
+[0m12:08:13.275879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe54536d5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe545319250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5453888d0>]}
+[0m12:08:13.276136 [debug] [MainThread]: Flushing usage events
+[0m12:08:13.825866 [debug] [MainThread]: An error was encountered while trying to flush usage events
