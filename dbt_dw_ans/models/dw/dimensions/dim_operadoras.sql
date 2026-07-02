@@ -5,7 +5,8 @@ WITH operadoras AS (
 caracteristicas AS (
     SELECT DISTINCT
         registro_operadora,
-        porte_operadora
+        porte_operadora,
+        contratacao
     FROM {{ ref('stg_caracteristicas_produtos_suplementares') }}
 )
 

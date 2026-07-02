@@ -1,11 +1,9 @@
 import os
 import csv
-import pandas as pd
 from dotenv import load_dotenv
 from utils.logger import logger
 from utils.postgres_conn import create_postgres_connection
 from utils.s3_conn import s3_conn
-from pathlib import Path
 import s3fs
 import tempfile
 import io

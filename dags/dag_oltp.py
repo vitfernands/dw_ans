@@ -20,8 +20,6 @@ default_args = {
 def exec_ingestao():
     percorrer_bucket(bucket_name=BUCKET_NAME)
 
-#DAG
-
 with DAG (
     dag_id="ingestao_stage",
     default_args=default_args,

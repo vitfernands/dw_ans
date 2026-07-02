@@ -1,6 +1,6 @@
 SELECT
     TRIM(id_plano)::VARCHAR(20)     AS id_plano,
-    TRIM(cd_plano)::VARCHAR(20)     AS cd_plano,
+    TRIM(cd_plano)::INTEGER         AS cd_plano,
     TRIM(cd_operadora)::INT         AS cd_operadora,
     TRIM(cd_nota)::INT              AS cd_nota,
     TRIM(dt_ntrp)::TIMESTAMP        AS dt_ntrp,

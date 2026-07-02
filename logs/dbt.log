@@ -168,3 +168,55 @@ https://docs.getdbt.com/docs/configure-your-profile
 {"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019e883b-8ea7-7330-b98b-d95ab383b81c","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":37384,"thread":"tokio-rt-worker","ts":"2026-06-02T12:07:45.133876Z"}}
 {"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019e883b-8ea7-7330-b98b-d95ab383b81c","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":37384,"thread":"tokio-rt-worker","ts":"2026-06-02T12:07:45.137135Z"}}
 {"data":{"completed_at":"2026-06-02T12:07:46.191417Z","elapsed":1.0893058776855469,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019e883b-8ea7-7330-b98b-d95ab383b81c","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [1.1s]","name":"CommandCompleted","pid":37384,"thread":"tokio-rt-worker","ts":"2026-06-02T12:07:46.193603Z"}}
+[0m09:55:15.173948 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 09:55:15.507271 | 1fd907ec-0977-42cd-826c-a7b012834ed6 ==============================
+[0m09:55:15.507271 [info ] [MainThread]: Running with dbt=1.9.0
+[0m09:55:15.507271 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\vitor.prochnow\\.dbt', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --select fato_preco_plano', 'send_anonymous_usage_stats': 'True'}
+[0m09:55:15.507271 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\vitor.prochnow\Documents\dw_ans\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m09:55:15.507271 [debug] [MainThread]: Command `dbt run` failed at 09:55:15.507271 after 0.39 seconds
+[0m09:55:15.507271 [debug] [MainThread]: Flushing usage events
+[0m10:22:25.747304 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 10:22:26.244062 | 55446e9f-9811-491c-aa4b-bbe423bcd77a ==============================
+[0m10:22:26.244062 [info ] [MainThread]: Running with dbt=1.9.0
+[0m10:22:26.244062 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\vitor.prochnow\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:22:26.247540 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\vitor.prochnow\Documents\dw_ans\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m10:22:26.247540 [debug] [MainThread]: Command `dbt run` failed at 10:22:26.247540 after 0.65 seconds
+[0m10:22:26.247540 [debug] [MainThread]: Flushing usage events
+[0m15:10:37.894757 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 15:10:38.076468 | 293c2f32-c1e1-4347-b8f9-a753a892b2d6 ==============================
+[0m15:10:38.076468 [info ] [MainThread]: Running with dbt=1.9.0
+[0m15:10:38.076468 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\vitor.prochnow\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select fato_preco_plano', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:10:38.076468 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\vitor.prochnow\Documents\dw_ans\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:10:38.081344 [debug] [MainThread]: Command `dbt run` failed at 15:10:38.081344 after 0.31 seconds
+[0m15:10:38.082412 [debug] [MainThread]: Flushing usage events
+[0m10:37:51.509627 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 10:37:51.686413 | 6f37a370-c69c-474e-abce-dd49d2d0fb7c ==============================
+[0m10:37:51.686413 [info ] [MainThread]: Running with dbt=1.9.0
+[0m10:37:51.688421 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\vitor.prochnow\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --select fato_preco_plano --full-refresh', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:37:51.689415 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\vitor.prochnow\Documents\dw_ans\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m10:37:51.690413 [debug] [MainThread]: Command `dbt run` failed at 10:37:51.690413 after 0.27 seconds
+[0m10:37:51.691415 [debug] [MainThread]: Flushing usage events
