@@ -2,7 +2,7 @@ SELECT
     TRIM(id_plano)::INTEGER               AS id_plano,
     TRIM(cd_plano)::VARCHAR(20)           AS cd_plano,
     TRIM(nm_plano)::VARCHAR(255)          AS nm_plano,
-    TRIM(registro_operadora)::VARCHAR(20) AS registro_operadora,
+    TRIM(registro_operadora)::INTEGER     AS registro_ans,
     TRIM(razao_social)::VARCHAR(255)      AS razao_social,
     TRIM(gr_modalidade)::VARCHAR(255)     AS gr_modalidade,
     TRIM(porte_operadora)::VARCHAR(30)    AS porte_operadora,
