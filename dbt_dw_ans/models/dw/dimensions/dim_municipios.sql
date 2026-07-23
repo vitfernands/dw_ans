@@ -1,8 +1,7 @@
 SELECT DISTINCT
-    {{ dbt_utils.generate_surrogate_key(['cd_municipio']) }} AS id_municipio,
     cd_municipio,
     nm_municipio,
     nm_regiao,
-    sg_uf
+    sg_uf,
+    id_area_geografica
 FROM {{ ref('tr_municipios') }}
-WHERE UPPER(sg_uf) = 'SC'

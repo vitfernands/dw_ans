@@ -2,7 +2,7 @@ SELECT
     id_plano,
     cd_plano,
     nm_plano,
-    contratacao,
+    contratacao           AS ds_contratacao,
     sgmt_assistencial,
     CASE 
         WHEN ig_odontologico = '1' THEN 'Inclui cobertura odontológica'
@@ -11,7 +11,7 @@ SELECT
     END                   AS ds_odontologico,
     obstetricia           AS ds_obstetricia,
     tipo_financiamento    AS ds_tipo_financiamento,
-    abrangencia_cobertura AS ds_abrangencia_cobertura
+    abrangencia_cobertura AS ds_abrangencia_cobertura,
     fator_moderador       AS ds_fator_moderador,
     acomodacao_hospitalar AS ds_acomodacao_hospitalar,
     livre_escolha         AS ds_livre_escolha,
@@ -19,4 +19,4 @@ SELECT
     dt_situacao,
     dt_registro_plano
 
-FROM ref{{ 'tr_caracteristicas_produtos_suplementares' }}
+FROM {{ ref('tr_caracteristicas_produtos_suplementares') }}
