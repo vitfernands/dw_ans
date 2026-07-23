@@ -92,7 +92,8 @@ SELECT
     {{ dbt_utils.generate_surrogate_key(['m.dt_ntrp']) }} AS id_tempo,
     {{ dbt_utils.generate_surrogate_key(['m.cd_operadora::varchar']) }} AS id_operadora,
     
-    -- 3. CHAVES ESTRANGEIRAS DAS CARACTERÍSTICAS (Padrão Snowflake do Professor)
+    -- 3. CHAVES ESTRANGEIRAS DAS CARACTERÍSTICAS    -- 2. CHAVES ESTRANGEIRAS (FKs) - LIGAÇÃO COM AS DIMENSÕES PRINCIPAIS
+ (Padrão Snowflake do Professor)
     {{ dbt_utils.generate_surrogate_key(['c.acomodacao_hospitalar']) }} AS id_acomodacao,
     {{ dbt_utils.generate_surrogate_key(['c.contratacao']) }} AS id_tipo_contratacao,
     {{ dbt_utils.generate_surrogate_key(['c.sgmt_assistencial']) }} AS id_sgmt,
@@ -119,7 +120,7 @@ LEFT JOIN valor_municipio                 vm ON m.id_plano     = vm.id_plano
                                             AND mf.cd_faixa_etaria::int = vm.cd_faixa_etaria
 
 -- Buscando a UF do município para podermos gerar a Surrogate Key da dim_uf
-INNER JOIN municipios_geo                  geo ON vm.cd_municipio = geo.cd_municipio
+LEFT JOIN municipios_geo                  geo ON vm.cd_municipio = geo.cd_municipio
 
 -- Ponte para coletar os atributos textuais e gerar os hashes das sub-dimensões do plano
 LEFT JOIN caracteristicas                 c  ON m.id_plano     = c.id_plano
