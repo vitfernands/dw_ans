@@ -1,5 +1,5 @@
 WITH mapa AS (
-    SELECT * FROM {{ ref('stg_mapeamento_faixa_etaria') }}
+    SELECT * FROM {{ ref('tr_mapeamento_faixa_etaria') }}
 ),
 
 dim_final AS (

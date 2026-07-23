@@ -6,7 +6,7 @@ caracteristicas AS (
     SELECT DISTINCT
         registro_operadora,
         porte_operadora
-    FROM {{ ref('stg_caracteristicas_produtos_suplementares') }}
+    FROM {{ ref('tr_caracteristicas_produtos_suplementares') }}
 )
 
 SELECT DISTINCT

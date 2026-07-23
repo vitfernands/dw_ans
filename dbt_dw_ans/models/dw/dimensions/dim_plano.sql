@@ -6,4 +6,4 @@ SELECT DISTINCT
     situacao_plano,
     abrangencia_cobertura                                AS abrangencia,
     obstetricia
-FROM {{ ref('stg_caracteristicas_produtos_suplementares') }}
+FROM {{ tr('stg_caracteristicas_produtos_suplementares') }}
