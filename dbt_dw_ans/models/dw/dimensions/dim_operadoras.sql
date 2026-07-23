@@ -1,5 +1,5 @@
 WITH operadoras AS (
-    SELECT * FROM {{ ref('stg_operadoras_ativas') }}
+    SELECT * FROM {{ ref('tr_operadoras_ativas') }}
 ),
 
 caracteristicas AS (
