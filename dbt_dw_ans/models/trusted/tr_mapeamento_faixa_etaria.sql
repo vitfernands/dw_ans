@@ -1,4 +1,4 @@
-SELECT 1 AS cd_faixa_etaria, '00 a 18 anos' AS faixa_etaria UNION ALL
+SELECT 1 AS cd_faixa_etaria, '00 a 18 anos' AS ds_faixa_etaria UNION ALL
 SELECT 2, '19 a 23 anos' UNION ALL
 SELECT 3, '24 a 28 anos' UNION ALL
 SELECT 4, '29 a 33 anos' UNION ALL
