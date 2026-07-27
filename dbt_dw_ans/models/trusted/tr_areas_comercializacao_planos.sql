@@ -3,7 +3,7 @@ SELECT
     TRIM(cd_plano)::INTEGER         AS cd_plano,
     TRIM(cd_operadora)::INTEGER     AS cd_operadora,
     TRIM(cd_nota)::INTEGER          AS cd_nota,
-    TRIM(dt_ntrp)::TIMESTAMP        AS dt_ntrp,
+    TRIM(dt_ntrp)::DATE             AS dt_ntrp,
     TRIM(cd_municipio)::INTEGER     AS cd_municipio,
     nm_municipio::VARCHAR(255)      AS nm_municipio,
     TRIM(sg_uf)::VARCHAR(2)         AS sg_uf,
