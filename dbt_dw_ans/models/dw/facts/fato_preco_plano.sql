@@ -20,7 +20,7 @@ WITH mensalidade_por_faixa_etaria AS (
 
 SELECT
     p.id_plano,
-    o.cd_operadora,
+    o.id_operadora,
     fe.ds_faixa_etaria,
     t.id_tempo,
     men.vl_comercial_mensalidade,
@@ -29,6 +29,6 @@ SELECT
     men.vcm_maximo
 FROM mensalidade_por_faixa_etaria men
 JOIN ref({{ 'dim_plano' }}) p ON p.id_plano = men.id_plano
-JOIN ref({{ 'dim_operadoras' }}) o ON o.cd_operadora = men.cd_operadora
+JOIN ref({{ 'dim_operadoras' }}) o ON o.id_operadora = men.id_operadora
 JOIN ref({{ 'dim_faixa_etaria' }}) fe ON fe.ds_faixa_etaria = men.faixa_etaria
 JOIN ref({{ 'dim_tempo' }}) t ON t.id_tempo = men.dt_ntrp
