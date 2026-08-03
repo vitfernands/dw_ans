@@ -1,13 +1,33 @@
-SELECT
-    CAST(TO_CHAR(date_day, 'YYYYMMDD') AS INT)   AS id_tempo,
-    date_day                                      AS data,
-    EXTRACT(YEAR    FROM date_day)::INT           AS ano,
-    EXTRACT(QUARTER FROM date_day)::INT           AS trimestre,
-    EXTRACT(MONTH   FROM date_day)::INT           AS nr_mes,
-    CASE EXTRACT(MONTH FROM date_day) ... END     AS nm_mes,
-    LEFT(CASE EXTRACT(MONTH FROM date_day) ... END, 3) AS nm_mes_abrev,
-    EXTRACT(YEAR FROM date_day)::INT * 100 + EXTRACT(MONTH FROM date_day)::INT AS ano_mes,   
-    EXTRACT(DAY     FROM date_day)::INT           AS dia,
-    CASE WHEN EXTRACT(MONTH FROM date_day) <= 6 THEN 1 ELSE 2 END AS semestre,
-    (date_day = (DATE_TRUNC('month', date_day) + INTERVAL '1 month' - INTERVAL '1 day')) AS fl_ultimo_dia_mes
-FROM dates
+{{ config(
+    unique_key=['id_tempo'],
+    indexes=[
+        {'columns': ['id_tempo']}
+    ]
+) }}
+
+with datas as (
+    {{ dbt_utils.date_spine(
+        datepart="day",
+        start_date="cast('2015-01-01' as date)",
+        end_date="cast('2030-12-31' as date)"
+    ) }}
+)
+
+select
+    date_day as data,
+    cast(to_char(date_day, 'YYYYMMDD') as int)      as id_tempo,
+    extract(year from date_day)                     as ano,
+    extract(month from date_day)                    as mes,
+    extract(day from date_day)                      as dia,
+    extract(quarter from date_day)                  as trimestre,
+    extract(dow from date_day)                      as dia_semana_num,
+    to_char(date_day, 'Day')                        as dia_semana_nome,
+    to_char(date_day, 'Month')                      as mes_nome,
+    case 
+        when extract(dow from date_day) in (0, 6) then true 
+        else false 
+    end                                              as fim_de_semana,
+    date_trunc('week', date_day)::date               as inicio_semana,
+    date_trunc('month', date_day)::date              as inicio_mes,
+    (date_trunc('month', date_day) + interval '1 month' - interval '1 day')::date as fim_mes
+from datas

@@ -1,3 +1,11 @@
+{{ config(
+    unique_key=['id_plano'],
+    indexes=[
+        {'columns': ['id_plano'], 'unique': True},
+        {'columns': ['dt_situacao']}
+    ]
+) }}
+
 SELECT
     id_plano,
     cd_plano,

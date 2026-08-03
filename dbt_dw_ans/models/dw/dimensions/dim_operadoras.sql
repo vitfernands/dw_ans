@@ -1,5 +1,12 @@
+{{ config(
+    unique_key=['id_operadora'],
+    indexes=[
+        {'columns': ['id_operadora']}
+    ]
+) }}
+
 SELECT
-    oa.registro_ans  AS cd_operadora,
+    oa.registro_ans  AS id_operadora,
     oa.cnpj,
     oa.razao_social  AS ds_operadora,
     oa.nome_fantasia AS ds_nome_fantasia,
@@ -16,15 +23,15 @@ SELECT
     oa.representante,
     oa.cargo_repr    AS cargo_representante,
     CASE
-        WHEN oa.regiao_comercializacao = 1 THEN 'Em todo o território nacional ou em grupos de pelo menos três estados dentre os seguintes: São Paulo, Rio de Janeiro, Minas Gerais, Rio Grande do Sul, Paraná e Bahia',
+        WHEN oa.regiao_comercializacao = 1 THEN 'Em todo o território nacional ou em grupos de pelo menos três estados dentre os seguintes: São Paulo, Rio de Janeiro, Minas Gerais, Rio Grande do Sul, Paraná e Bahia'
 
-        WHEN oa.regiao_comercializacao = 2 THEN 'No Estado de São Paulo ou em mais de um estado, excetuando os grupos definidos no critério da região 1',
+        WHEN oa.regiao_comercializacao = 2 THEN 'No Estado de São Paulo ou em mais de um estado, excetuando os grupos definidos no critério da região 1'
 
-        WHEN oa.regiao_comercializacao = 3 THEN 'Em um único estado, qualquer que seja ele, excetuando-se o Estado de São Paulo',
+        WHEN oa.regiao_comercializacao = 3 THEN 'Em um único estado, qualquer que seja ele, excetuando-se o Estado de São Paulo'
 
-        WHEN oa.regiao_comercializacao = 4 THEN 'No Município de São Paulo, do Rio de Janeiro, de Belo Horizonte, de Porto Alegre ou de Curitiba ou de Brasília',
+        WHEN oa.regiao_comercializacao = 4 THEN 'No Município de São Paulo, do Rio de Janeiro, de Belo Horizonte, de Porto Alegre ou de Curitiba ou de Brasília'
 
-        WHEN oa.regiao_comercializacao = 5 THEN 'Em grupo de municípios, excetuando os definidos na região 4',
+        WHEN oa.regiao_comercializacao = 5 THEN 'Em grupo de municípios, excetuando os definidos na região 4'
 
         WHEN oa.regiao_comercializacao = 6 THEN 'Em um único município, excetuando os definidos na região 4'
 
@@ -32,4 +39,4 @@ SELECT
     END AS ds_regiao_comercializacao,
 
     oa.dt_registro_ans  
-FROM ref({{ 'tr_operadoras_ativas' }}) oa
+FROM {{ ref('tr_operadoras_ativas') }} oa

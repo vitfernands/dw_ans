@@ -1,5 +1,12 @@
+{{ config(
+    unique_key=['id_municipio'],
+    indexes=[
+        {'columns': id_municipio, 'unique': True}
+    ]
+) }}
+
 SELECT DISTINCT
-    cd_municipio,
+    cd_municipio AS id_municipio,
     nm_municipio,
     nm_regiao,
     sg_uf,
