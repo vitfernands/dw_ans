@@ -10,4 +10,4 @@ SELECT
     nm_regiao::VARCHAR(255)         AS nm_regiao,
     TRIM(dt_atualizacao)::TIMESTAMP AS dt_atualizacao
 
-FROM {{source('stage', 'areas_comercializacao_planos') }}
+FROM {{ source('stage', 'areas_comercializacao_planos') }}
