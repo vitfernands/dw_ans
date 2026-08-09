@@ -1,9 +1,9 @@
 {{ config(
     indexes=[
-        {'columns': id_plano},
-        {'columns': id_operadora},
-        {'columns': dt_ntrp},
-        {'columns': id_municipio}
+        {'columns': ['id_plano']},
+        {'columns': ['id_operadora']},
+        {'columns': ['dt_ntrp']},
+        {'columns': ['id_municipio']}
     ]
 ) }}
 

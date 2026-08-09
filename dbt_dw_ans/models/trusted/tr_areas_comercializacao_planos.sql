@@ -1,3 +1,11 @@
+{{ config(
+    indexes=[
+        {'columns': ['id_plano']},
+        {'columns': ['cd_operadora']},
+        {'columns': ['cd_nota']}
+    ]
+) }}
+
 SELECT
     TRIM(id_plano)::VARCHAR(20)     AS id_plano,
     TRIM(cd_plano)::INTEGER         AS cd_plano,
