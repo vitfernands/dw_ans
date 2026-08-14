@@ -4,4 +4,4 @@ dotenv
 sqlalchemy
 boto3
 s3fs
-astronomer-cosmos
+    
