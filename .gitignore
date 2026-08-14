@@ -1,4 +1,8 @@
 .env
 .venv
 __pycache__
+<<<<<<< HEAD
 *.log
+=======
+logs
+>>>>>>> 02a007e8e06818afa31d5c0b58fdda91e21ab551

@@ -10,7 +10,7 @@ import io
 
 load_dotenv()
 
-def ingestao_oltp(path: str, table_name: str, conn) -> None:
+def ingestao_staging(path: str, table_name: str, conn) -> None:
     delimitador = obter_delimitador(path=path)
 
     cursor = conn.cursor()
@@ -70,7 +70,7 @@ def percorrer_bucket(bucket_name: str) -> None:
                 logger.info(f"Processando: {s3_path}")
                 logger.info(f"Inserindo na tabela: {table_name}")
 
-                ingestao_oltp(
+                ingestao_staging(
                     path=s3_temp,
                     table_name=table_name,
                     conn=conn

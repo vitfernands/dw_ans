@@ -1,34 +1,33 @@
-WITH datas_geradas AS (
-    -- Gera uma sequência de datas de 2024 até o fim de 2026
-    SELECT 
-        CAST(data AS DATE) AS data_dia
-    FROM 
-        GENERATE_SERIES('2024-01-01'::DATE, '2026-12-31'::DATE, '1 day'::INTERVAL) AS data
+{{ config(
+    unique_key=['id_tempo'],
+    indexes=[
+        {'columns': ['id_tempo']}
+    ]
+) }}
+
+with datas as (
+    {{ dbt_utils.date_spine(
+        datepart="day",
+        start_date="cast('2015-01-01' as date)",
+        end_date="cast('2030-12-31' as date)"
+    ) }}
 )
 
-SELECT
-    -- A sua Chave Primária (pode ser a própria data ou um ID inteiro AAAAMMDD)
-    TO_CHAR(data_dia, 'YYYYMMDD')::INT AS id_tempo,
-    data_dia AS data_completa,
-    
-    -- Atributos de Ano
-    EXTRACT(YEAR FROM data_dia) AS ano,
-    
-    -- Atributos de Mês
-    EXTRACT(MONTH FROM data_dia) AS mes,
-    TO_CHAR(data_dia, 'TMMonth') AS nome_mes, -- Ex: Janeiro, Fevereiro
-    TO_CHAR(data_dia, 'Mon') AS nome_mes_abrev, -- Ex: Jan, Fev
-    
-    -- Atributos de Trimestre / Semestre
-    EXTRACT(QUARTER FROM data_dia) AS trimestre,
-    CASE WHEN EXTRACT(MONTH FROM data_dia) <= 6 THEN 1 ELSE 2 END AS semestre,
-    
-    -- Atributos de Semana / Dia
-    EXTRACT(DAY FROM data_dia) AS dia,
-    EXTRACT(DOW FROM data_dia) AS dia_da_semana, -- 0 (Domingo) a 6 (Sábado)
-    TO_CHAR(data_dia, 'TMDay') AS nome_dia_semana, -- Ex: Segunda-Feira
-    
-    -- Flags Úteis para Análise Econômica
-    CASE WHEN EXTRACT(DOW FROM data_dia) IN (0, 6) THEN TRUE ELSE FALSE END AS eh_final_semana
-
-FROM datas_geradas
+select
+    date_day as data,
+    cast(to_char(date_day, 'YYYYMMDD') as int)      as id_tempo,
+    extract(year from date_day)                     as ano,
+    extract(month from date_day)                    as mes,
+    extract(day from date_day)                      as dia,
+    extract(quarter from date_day)                  as trimestre,
+    extract(dow from date_day)                      as dia_semana_num,
+    to_char(date_day, 'Day')                        as dia_semana_nome,
+    to_char(date_day, 'Month')                      as mes_nome,
+    case 
+        when extract(dow from date_day) in (0, 6) then true 
+        else false 
+    end                                              as fim_de_semana,
+    date_trunc('week', date_day)::date               as inicio_semana,
+    date_trunc('month', date_day)::date              as inicio_mes,
+    (date_trunc('month', date_day) + interval '1 month' - interval '1 day')::date as fim_mes
+from datas

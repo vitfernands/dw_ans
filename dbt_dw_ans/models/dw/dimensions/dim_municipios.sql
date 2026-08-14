@@ -1,8 +1,14 @@
+{{ config(
+    unique_key=['id_municipio'],
+    indexes=[
+        {'columns': ['id_municipio'], 'unique': True}
+    ]
+) }}
+
 SELECT DISTINCT
-    {{ dbt_utils.generate_surrogate_key(['cd_municipio']) }} AS id_municipio, -- Criação da surrogate key
-    cd_municipio,
+    cd_municipio AS id_municipio,
     nm_municipio,
     nm_regiao,
     sg_uf
-FROM {{ ref('stg_municipios') }}
-WHERE UPPER(sg_uf) = 'SC' 
+FROM {{ ref('tr_municipios') }}
+
