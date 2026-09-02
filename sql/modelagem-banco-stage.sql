@@ -27,17 +27,16 @@ CREATE TABLE operadoras_ativas (
 --Tabela de reclamações (IGR)
 
 CREATE TABLE indice_reclamacoes (
-	registro_ans TEXT,
+	registro_operadora TEXT,
 	razao_social TEXT,
 	cobertura TEXT,
 	igr TEXT,
-	qtd_reclamacao TEXT,
-	qtd_benef TEXT,
+	qtd_reclamacoes TEXT,
+	qtd_beneficiarios TEXT,
 	porte_operadora TEXT,
 	competencia TEXT,
-	competencia_benef TEXT,
-	dt_atualizacao TEXT,
-	dt_download TEXT
+	competencia_beneficiario TEXT,
+	dt_atualizacao TEXT
 );
 
 --Tabela taxa de resolutividade
