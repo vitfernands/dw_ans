@@ -24,7 +24,8 @@ WITH dados AS (
         ROW_NUMBER() OVER (
             PARTITION BY 
                 acp.id_plano,
-                acp.dt_ntrp::DATE
+                acp.dt_ntrp::DATE,
+                acp.cd_municipio
             ORDER BY 
                 acp.cd_nota DESC
         ) AS rn
