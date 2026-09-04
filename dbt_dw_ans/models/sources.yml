@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: stage
-    database: dw_operadoras
-    schema: public
+    database: dw_ans
+    schema: stage
     tables:
       - name: areas_comercializacao_planos
       - name: caracteristicas_produtos_suplementares
