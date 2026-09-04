@@ -1,6 +1,6 @@
 SELECT
     TRIM(registro_ans)::INT                        AS cd_operadora,
-    TRIM(razao_social)::VARCHAR(255)               AS razao_social,
+    TRIM(razao_social)::VARCHAR(255)               AS razao_social_operadora,
     TRIM(tp_natureza)::VARCHAR(30)                 AS tp_natureza,
     TRIM(REPLACE(vl_tr, ',', '.'))::DECIMAL(10, 2) AS vl_tr,
     TRIM(nr_numerador)::INT                        AS nr_numerador,

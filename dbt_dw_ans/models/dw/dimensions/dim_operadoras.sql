@@ -1,12 +1,12 @@
 {{ config(
-    unique_key=['id_operadora'],
+    unique_key=['cd_operadora'],
     indexes=[
-        {'columns': ['id_operadora']}
+        {'columns': ['cd_operadora']}
     ]
 ) }}
 
 SELECT
-    oa.registro_ans  AS id_operadora,
+    oa.registro_ans  AS cd_operadora,
     oa.cnpj,
     oa.razao_social  AS ds_operadora,
     oa.nome_fantasia AS ds_nome_fantasia,
