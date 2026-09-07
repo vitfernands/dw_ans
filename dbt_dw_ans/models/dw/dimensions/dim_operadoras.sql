@@ -8,7 +8,7 @@
 SELECT
     oa.registro_ans  AS cd_operadora,
     oa.cnpj,
-    oa.razao_social  AS ds_operadora,
+    oa.razao_social  AS nm_operadora,
     oa.nome_fantasia AS ds_nome_fantasia,
     oa.modalidade    AS ds_modalidade,
     oa.logradouro    AS ds_logradouro,
