@@ -23,4 +23,9 @@ SELECT
     TRIM(dt_situacao)::DATE               AS dt_situacao,
     TRIM(dt_registro_plano)::DATE         AS dt_registro_plano,
     TRIM(dt_atualizacao)::DATE            AS dt_atualizacao
-FROM {{source('stage', 'caracteristicas_produtos_suplementares') }}
+FROM {{source('stage', 'caracteristicas_produtos_suplementares') }} cps
+WHERE EXISTS (
+    SELECT 1 
+    FROM {{ ref('tr_areas_comercializacao_planos') }} acp
+    WHERE acp.id_plano = cps.id_plano::INTEGER
+)
