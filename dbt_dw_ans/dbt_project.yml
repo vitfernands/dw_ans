@@ -37,3 +37,6 @@ models:
     dw:
       +schema: dw
       +materialized: table
+    analytics:
+      +schema: dw
+      +materialized: view
