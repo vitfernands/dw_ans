@@ -10,6 +10,7 @@ SELECT
     id_plano,
     cd_plano,
     nm_plano,
+    registro_ans          AS cd_operadora,
     contratacao           AS ds_contratacao,
     sgmt_assistencial,
     CASE 
