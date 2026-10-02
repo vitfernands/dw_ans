@@ -19,3 +19,4 @@ SELECT
     dt_registro_ans::DATE                   as dt_registro_ans
 
 FROM {{ source('stage', 'operadoras_ativas') }}
+WHERE TRIM(UPPER(uf)) = 'SC'

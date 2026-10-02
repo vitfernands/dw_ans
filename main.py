@@ -1,10 +1,8 @@
-from etl.oltp import percorrer_bucket
-from dotenv import load_dotenv
-import os
+from pathlib import Path
+from etl.stage import Pipeline_stage
 
-def main():
-    bucket = os.getenv("S3_BUCKET_NAME")
-    percorrer_bucket(bucket_name=bucket)
+DATA_DIR = Path("data")
 
-if __name__ == "__main__":
-    main()
+pipeline = Pipeline_stage(DATA_DIR)
+
+pipeline.execute()

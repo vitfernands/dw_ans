@@ -10,7 +10,7 @@
 WITH dados AS (
 
     SELECT
-        TRIM(acp.id_plano)::VARCHAR(20)       AS id_plano,
+        TRIM(acp.id_plano)::INTEGER           AS id_plano,
         TRIM(acp.cd_plano)::INTEGER           AS cd_plano,
         TRIM(acp.cd_operadora)::INTEGER       AS cd_operadora,
         TRIM(acp.cd_nota)::INTEGER            AS cd_nota,

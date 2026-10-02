@@ -35,7 +35,7 @@ WITH dados AS (
     WHERE EXISTS (
         SELECT 1 
         FROM {{ ref('tr_areas_comercializacao_planos') }} acp 
-        WHERE acp.id_plano = mfe.id_plano
+        WHERE acp.id_plano = mfe.id_plano::INTEGER
     )
 )
 

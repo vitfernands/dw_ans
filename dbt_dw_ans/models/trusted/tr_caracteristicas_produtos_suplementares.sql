@@ -27,5 +27,5 @@ FROM {{source('stage', 'caracteristicas_produtos_suplementares') }} cps
 WHERE EXISTS (
     SELECT 1 
     FROM {{ ref('tr_areas_comercializacao_planos') }} acp
-    WHERE acp.id_plano = cps.id_plano
+    WHERE acp.id_plano = cps.id_plano::INTEGER
 )
