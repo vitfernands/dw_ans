@@ -41,15 +41,18 @@ CREATE TABLE indice_reclamacoes (
 
 --Tabela taxa de resolutividade
 
+-- Ordem das colunas igual à do CSV (pda-048), pois o COPY carrega por posição:
+-- CD_REGISTRO_ANS; NM_RAZAO_SOCIAL; TP_NATUREZA; VL_TR; NR_NUMERADOR; NR_DENOMINADOR; CD_COMPETENCIA; DT_ATUALIZACAO
+
 CREATE TABLE taxa_resolutividade (
 	registro_ans TEXT,
 	razao_social TEXT,
 	tp_natureza TEXT,
 	vl_tr TEXT,
 	nr_numerador TEXT,
+	nr_denominador TEXT,
 	cd_competencia TEXT,
-	dt_atualizacao TEXT,
-	dt_registro TEXT
+	dt_atualizacao TEXT
 );
 
 --Tabela mensalidade por faixa etária

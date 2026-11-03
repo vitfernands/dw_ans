@@ -14,13 +14,6 @@ OPTIONS (
     port '5432'
 );
 
-CREATE USER MAPPING FOR vitorp
-SERVER stage_server
-OPTIONS (
-    user 'vitorp',
-    password 'equi81'
-);
-
 --Importando as tabelas
 
 IMPORT FOREIGN SCHEMA public

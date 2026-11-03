@@ -2,6 +2,9 @@ SELECT
 	fato.id_plano,
 	fato.cd_operadora,
 	o.nm_operadora,
+	o.uf AS uf_sede_operadora,
+	o.fl_sede_sc,
+	o.fl_operadora_ativa,
 	m.nm_municipio,
 	fato.dt_ntrp
 FROM {{ ref('fato_areas_comercializacao_planos') }} fato

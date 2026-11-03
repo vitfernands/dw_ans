@@ -1,3 +1,6 @@
+-- Cadastro de todas as operadoras ativas do país (sem filtro de UF).
+-- O recorte "mercado de SC" é aplicado na dim_operadoras, a partir das áreas de comercialização.
+
 SELECT
     TRIM(registro_ans)::INTEGER             as cd_operadora,
     TRIM(cnpj)::VARCHAR(14)                 as cnpj,
@@ -9,14 +12,13 @@ SELECT
     complemento::VARCHAR(255)               as complemento,
     bairro::VARCHAR(255)                    as bairro,
     cidade::VARCHAR(255)                    as cidade,
-    TRIM(uf)::VARCHAR(2)                    as uf,
+    TRIM(UPPER(uf))::VARCHAR(2)             as uf,
     TRIM(REPLACE(cep, '-', ''))::VARCHAR(8) as cep,
     TRIM(ddd)::VARCHAR(2)                   as ddd,
     TRIM(telefone)::VARCHAR(20)             as telefone,
     representante::VARCHAR(255)             as representante,
     cargo_repr::VARCHAR(100)                as cargo_repr,
-    TRIM(regiao_comercializacao)::INT       as regiao_comercializacao,
+    NULLIF(TRIM(regiao_comercializacao), '')::INT as regiao_comercializacao,
     dt_registro_ans::DATE                   as dt_registro_ans
 
 FROM {{ source('stage', 'operadoras_ativas') }}
-WHERE TRIM(UPPER(uf)) = 'SC'
