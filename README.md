@@ -12,8 +12,8 @@ Consumo com ferramentas de BI para geração de indicadores.
 
 - Python
 - PostgreSQL
-- DBT Core
-- Ferramenta de visualização de dados (a combinar)
+- Dbt Core
+- Tableau Public
 
 ## Camadas do DW
 
@@ -21,3 +21,4 @@ Consumo com ferramentas de BI para geração de indicadores.
 - Trusted → Inicio dos tratamentos de dados, padronização de tipagem e nomenclaturas.
 - DW → Camada "Gold", onde são criadas as tabelas "Fato" e "Dimensão" para criação dos indicadores. As ferramentas para criação destes indicadores terão acesso
   unicamente nessa camada.
+- Analytics → Camada criada para consumo do BI, contendo as views que alimentam os painéis.
