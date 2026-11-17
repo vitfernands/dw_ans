@@ -22,3 +22,9 @@ Consumo com ferramentas de BI para geração de indicadores.
 - DW → Camada "Gold", onde são criadas as tabelas "Fato" e "Dimensão" para criação dos indicadores. As ferramentas para criação destes indicadores terão acesso
   unicamente nessa camada.
 - Analytics → Camada criada para consumo do BI, contendo as views que alimentam os painéis.
+
+## Painés
+- Após os tratamentos dos dados, alguns painéis foram criados na ferramenta Tableau. Disponíveis para visualização em: https://public.tableau.com/app/profile/vitor.prochnow/viz/PlanosdeSade-SantaCatarina/Painel2
+
+## Disponibilização dos Dados
+- Além disso, as 3 views que foram geradas na camada Analytics estão disponíveis no Kaggle: https://www.kaggle.com/datasets/vitfernands/planos-e-operadoras-de-sade-santa-catarina
